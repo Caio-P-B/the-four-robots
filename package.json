@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Caio-P-B/the-four-robots/issues"
   },
-  "homepage": "https://github.com/Caio-P-B/the-four-robots#readme"
+  "homepage": "https://github.com/Caio-P-B/the-four-robots#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
