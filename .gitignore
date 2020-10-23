@@ -80,7 +80,8 @@ typings/
 
 #credentials
 credentials/*.json
-:qw
+
+content.json
 
 # Nuxt.js build / generate output
 .nuxt
