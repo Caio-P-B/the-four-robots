@@ -1,4 +1,8 @@
+state
 # credentials format
+=======
+# Credentials format 
+master
 
 ## algorithmia
 
