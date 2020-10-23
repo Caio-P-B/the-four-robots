@@ -11,14 +11,18 @@ const nlu = new NaturalLanguageUnderstandingV1({
   url: 'https://gateway.watsonplatform.net/natural-language-understanding/api/'
 })
 
+const state = require('./state.js')
 
+async function robot() {
+    const content = state.load()
 
-async function robot(content) {
     await fetchContentFromWikipedia(content)
    sanitizeContent(content)
    breakContentIntoSentences(content)
    limitMaximumSentences(content)
    await fetchKeywordsOfAllSentences(content)
+
+   state.save(content)
 
    async function fetchContentFromWikipedia(content) {
        const algorithmiaAuthenticated = algorithmia(algorithmiaApiKey)
@@ -48,7 +52,7 @@ async function robot(content) {
    }
 
    function removeDatesInParentheses(text) {
-    return text.replace(/\((?:\([^()]*\)|[^()])*\)/gm,'\n', '').replace(/  /g,' ')
+    return text.replace(/\((?:\([^()]*\)|[^()])*\)/gm,'\n', '').replace(/  /g,' ').replace('\n')
    }
    function breakContentIntoSentences(content) {
        content.sentences = []
