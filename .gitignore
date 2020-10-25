@@ -83,6 +83,10 @@ credentials/*.json
 
 content.json
 
+content/*.pn
+
+.DS_Store
+
 # Nuxt.js build / generate output
 .nuxt
 dist
