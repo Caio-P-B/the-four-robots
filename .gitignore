@@ -83,7 +83,8 @@ credentials/*.json
 
 content.json
 
-content/*.pn
+content/*.png
+content/*.jpg
 
 .DS_Store
 
