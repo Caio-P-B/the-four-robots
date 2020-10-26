@@ -4,6 +4,8 @@ const robots = {
     state: require('./robots/state.js'),
     image: require('./robots/image.js'),
     video: require('./robots/video.js')
+    state: require('./robots/state.js'), // erro
+    image: require('./robots/image.js')
 }
 async function start() {
     robots.input()
