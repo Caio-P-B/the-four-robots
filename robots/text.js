@@ -11,14 +11,10 @@ const nlu = new NaturalLanguageUnderstandingV1({
   url: 'https://gateway.watsonplatform.net/natural-language-understanding/api/'
 })
 
-stateconst state = require('./state.js')
+const state = require('./state.js')
 
 async function robot() {
-    const content = state.load()
-
-
-
-async function robot(content) {
+const content = state.load()
 
     await fetchContentFromWikipedia(content)
    sanitizeContent(content)
@@ -104,4 +100,5 @@ async function robot(content) {
     })
 }
 }
+
 module.exports = robot
